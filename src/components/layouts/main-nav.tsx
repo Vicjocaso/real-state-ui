@@ -33,7 +33,7 @@ export function MainNav({ items }: MainNavProps) {
           <span className="font-medium text-slate-50">VC</span>
         </div>
         <span className="hidden font-bold lg:inline-block">
-          {/* {siteConfig.name} */}
+          {siteConfig.name}
         </span>
       </Link>
       <NavigationMenu>

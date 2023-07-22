@@ -8,15 +8,15 @@ export type SiteConfig = typeof siteConfig;
 const links = {
   github: "https://github.com/Vicjocaso",
   githubAccount: "https://github.com/Vicjocaso",
-  threads: "https://github.com/Vicjocaso",
+  threads: "https://www.threads.net/@vicjocaso",
 };
 
 export const siteConfig = {
-  name: "Real State",
+  name: "Real State UI",
   description:
-    "An open source e-commerce skateshop build with everything new in Next.js 13.",
-  url: "https://skateshop.sadmn.com",
-  ogImage: "https://skateshop.sadmn.com/opengraph-image.png",
+    "An real state UI project build with everything new in Next.js 13.",
+  url: "",
+  ogImage: "",
   mainNav: [
     {
       title: "Residencies",
@@ -42,56 +42,56 @@ export const siteConfig = {
   links,
   footerNav: [
     {
-      title: "Credits",
+      title: "Tools",
       items: [
         {
-          title: "OneStopShop",
-          href: "https://onestopshop.jackblatch.com",
+          title: "Nextjs",
+          href: "https://nextjs.org/",
           external: true,
         },
         {
-          title: "Acme Corp",
-          href: "https://acme-corp.jumr.dev",
+          title: "Tailwindcss",
+          href: "https://tailwindcss.com/",
           external: true,
         },
         {
-          title: "craft.mxkaske.dev",
-          href: "https://craft.mxkaske.dev",
+          title: "Shadcn/ui",
+          href: "https://ui.shadcn.com/",
           external: true,
         },
         {
-          title: "Taxonomy",
-          href: "https://tx.shadcn.com/",
+          title: "React UseForm",
+          href: "https://www.react-hook-form.com/api/useform/",
           external: true,
         },
         {
-          title: "shadcn/ui",
-          href: "https://ui.shadcn.com",
+          title: "Zod",
+          href: "https://zod.dev/",
           external: true,
         },
       ],
     },
     {
-      title: "Help",
+      title: "Routes",
       items: [
         {
-          title: "About",
-          href: "/about",
+          title: "Residencies",
+          href: "/#residence",
           external: false,
         },
         {
-          title: "Contact",
-          href: "/contact",
+          title: "Our Value",
+          href: "/#our-value",
           external: false,
         },
         {
-          title: "Terms",
-          href: "/terms",
+          title: "Contact Us",
+          href: "/#contact-us",
           external: false,
         },
         {
-          title: "Privacy",
-          href: "/privacy",
+          title: "Get Started",
+          href: "/#get-started",
           external: false,
         },
       ],
@@ -107,31 +107,6 @@ export const siteConfig = {
         {
           title: "Threads",
           href: links.threads,
-          external: true,
-        },
-      ],
-    },
-    {
-      title: "Decompress",
-      items: [
-        {
-          title: "beats to study to",
-          href: "https://www.youtube.com/watch?v=jfKfPfyJRdk",
-          external: true,
-        },
-        {
-          title: "beats to chill to",
-          href: "https://www.youtube.com/watch?v=rUxyKA_-grg",
-          external: true,
-        },
-        {
-          title: "a fresh start",
-          href: "https://www.youtube.com/watch?v=rwionZbOryo",
-          external: true,
-        },
-        {
-          title: "coffee to go",
-          href: "https://www.youtube.com/watch?v=2gliGzb2_1I",
           external: true,
         },
       ],

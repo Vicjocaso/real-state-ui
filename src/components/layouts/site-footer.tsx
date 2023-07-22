@@ -27,7 +27,9 @@ export function SiteFooter() {
               href="/"
               className="flex items-center space-x-2"
             >
-              <Icons.logo className="h-6 w-6" aria-hidden="true" />
+              <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-slate-900 rounded-full">
+                <span className="font-medium text-slate-50">VC</span>
+              </div>
               <span className="font-bold">{siteConfig.name}</span>
             </Link>
           </section>
@@ -57,16 +59,6 @@ export function SiteFooter() {
               </div>
             ))}
           </section>
-          <section
-            id="newsletter"
-            aria-labelledby="newsletter-heading"
-            className="space-y-3"
-          >
-            <h4 className="text-base font-medium">
-              Subscribe to our newsletter
-            </h4>
-            {/* <SubscribeToNewsletterForm /> */}
-          </section>
         </section>
         <section
           id="footer-bottom"
@@ -77,7 +69,7 @@ export function SiteFooter() {
             Built by{" "}
             <a
               aria-label="Kickflip tutorial on YouTube"
-              href="https://twitter.com/sadmann17"
+              href="https://github.com/Vicjocaso"
               target="_blank"
               rel="noreferrer"
               className="font-semibold transition-colors hover:text-foreground"
