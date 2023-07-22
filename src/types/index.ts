@@ -1,3 +1,5 @@
+import { Icons } from "@/components/icons";
+
 export type MainNavItem = {
   title: string;
   href?: string;
@@ -23,3 +25,12 @@ export interface NavItemWithChildren extends MainNavItem {
   items: NavItemWithChildren[];
 }
 export type SidebarNavItem = NavItemWithChildren;
+
+export interface contactcard {
+  title: string;
+  description: string;
+  icon: keyof typeof Icons;
+  href?: string;
+}
+
+export type contactCardArray = contactcard[];

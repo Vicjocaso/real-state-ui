@@ -29,9 +29,11 @@ export function MainNav({ items }: MainNavProps) {
         href="/"
         className="hidden items-center space-x-2 lg:flex"
       >
-        <Icons.logo className="h-6 w-6" aria-hidden="true" />
+        <div className="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-slate-900 rounded-full">
+          <span className="font-medium text-slate-50">VC</span>
+        </div>
         <span className="hidden font-bold lg:inline-block">
-          {siteConfig.name}
+          {/* {siteConfig.name} */}
         </span>
       </Link>
       <NavigationMenu>
@@ -75,7 +77,7 @@ export function MainNav({ items }: MainNavProps) {
           ) : (
             items?.[0]?.href && (
               <NavigationMenuItem key={items[0].title}>
-                <Link href={items[0].href} scroll={false}>
+                <Link href={items[0].href} legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "h-auto")}
                   >

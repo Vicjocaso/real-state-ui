@@ -18,7 +18,7 @@ export default function CarouselCard() {
   };
 
   return (
-    <div className="overflow-hidden relative w-[100%] dark:bg-transparent rounded-lg">
+    <div className="overflow-hidden relative w-full dark:bg-transparent rounded-lg">
       <div className="flex justify-end">
         <button
           onClick={scrollLeft}
@@ -35,10 +35,10 @@ export default function CarouselCard() {
       </div>
       <div
         ref={contentRef}
-        className="p-4 flex items-center justify-start overflow-x-auto scroll-smooth"
+        className="flex items-center justify-start overflow-x-auto scroll-smooth"
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-          <div key={i} className="px-12">
+          <div key={i} className="lg:px-12">
             <CardWithForm />
           </div>
         ))}

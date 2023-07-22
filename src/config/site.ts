@@ -20,22 +20,22 @@ export const siteConfig = {
   mainNav: [
     {
       title: "Residencies",
-      href: "residencies",
+      href: "/#residence",
       external: false,
     },
     {
       title: "Our Value",
-      href: "#our-value",
+      href: "/#our-value",
       external: false,
     },
     {
       title: "Contact Us",
-      href: "#contact-us",
+      href: "/#contact-us",
       external: false,
     },
     {
       title: "Get Started",
-      href: "#get-started",
+      href: "/#get-started",
       external: false,
     },
   ] satisfies MainNavItem[],
