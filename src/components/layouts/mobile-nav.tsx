@@ -54,7 +54,6 @@ export function MobileNav({ mainNavItems, sidebarNavItems }: MobileNavProps) {
           <div className="pl-1 pr-7">
             <Accordion type="single" collapsible className="w-full">
               {mainNavItems?.map((item, index) => (
-                //if item has items, it's a dropdown
                 <div key={index}>
                   {item.items ? (
                     <AccordionItem value={item.title}>

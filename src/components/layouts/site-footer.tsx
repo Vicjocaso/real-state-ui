@@ -3,7 +3,6 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-// import { SubscribeToNewsletterForm } from "@/components/forms/subscribe-to-newsletter-form";
 import { Icons } from "@/components/icons";
 import { ThemeToggle } from "@/components/layouts/theme-toggle";
 import { Shell } from "@/components/shell";
@@ -11,7 +10,6 @@ import { Shell } from "@/components/shell";
 export function SiteFooter() {
   return (
     <footer className="w-full border-t bg-background">
-      {/* Shell */}
       <Shell as={"div"}>
         <section
           id="footer-content"
