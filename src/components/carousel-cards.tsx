@@ -1,7 +1,10 @@
 "use client";
+
 import { useRef } from "react";
+import * as React from "react";
 import Image from "next/image";
 import { Icons } from "./icons";
+import { houses } from "../../data/houses";
 
 export default function CarouselCard() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -37,17 +40,21 @@ export default function CarouselCard() {
         ref={contentRef}
         className="flex items-center justify-start overflow-x-auto scroll-smooth"
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-          <div key={i} className="lg:px-12">
-            <CardWithForm />
+        {houses.map((house) => (
+          <div key={house.title} className="lg:px-12">
+            <CardHouses
+              title={house.title}
+              image={house.image}
+              price={house.price}
+              location={house.location}
+              description={house.description}
+            />
           </div>
         ))}
       </div>
     </div>
   );
 }
-
-import * as React from "react";
 
 import {
   Card,
@@ -56,14 +63,22 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 
-export function CardWithForm() {
+interface CardHousesProps {
+  image: string;
+  price: number;
+  title: string;
+  location: string;
+  description: string;
+}
+
+export function CardHouses(props: CardHousesProps) {
   return (
     <Card className="w-[350px]">
       <CardHeader>
         <div className="relative w-full h-40">
           <Image
             className="object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+            src={props.image}
             alt="img"
             fill
           />
@@ -71,16 +86,13 @@ export function CardWithForm() {
       </CardHeader>
       <CardContent>
         <div className="">
-          <div className="">$599</div>
+          <div className="">${props.price}</div>
 
-          <div className="font-semibold text-xs my-1">Aliva Priva Jardin</div>
+          <div className="font-semibold text-xs my-1">{props.title}</div>
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">
-        <div className="text-xs text-slate-400">
-          Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI
-          Jakarta
-        </div>
+        <div className="text-xs text-slate-400">{props.description}</div>
       </CardFooter>
     </Card>
   );
